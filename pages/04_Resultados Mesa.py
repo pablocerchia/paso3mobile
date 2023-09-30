@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.graph_objs as go
 import plotly.express as px
 import numpy as np
 import streamlit.components.v1 as components
@@ -124,8 +125,8 @@ with c22:
     fig.update_layout(showlegend=False, template='simple_white', height=650)  
     #fig.update_traces(customdata=[df_sin_nulos_grafico['votos']], selector=dict(type='bar'))
     #fig.update_traces(hovertemplate='Agrupación: %{y}<br>Porcentaje: %{x}<br>Cantidad de votos: %{customdata[0]}', hoverlabel=dict(namelength=0))
-    fig.update_yaxes(title="", fixedrange=True)
-    fig.update_xaxes(title="", fixedrange=True)
+    fig.update_yaxes(title="")
+    fig.update_xaxes(title="Porcentaje")
 
 
     df_final2.rename(columns={'agrupacion':'Agrupación política', 'tipovoto':'Tipo de voto', 'votos': 'Votos'}, inplace=True)
