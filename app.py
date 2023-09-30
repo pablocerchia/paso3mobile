@@ -64,7 +64,3 @@ if tabs_generales == 'SENADORES':
     senadores()
 if tabs_generales == 'GOBERNADOR PBA':
     gobernadores()
-
-        
-        fig4 = go.Figure(data=data, layout=layout)
-        st.plotly_chart(fig4, use_container_width=True)
