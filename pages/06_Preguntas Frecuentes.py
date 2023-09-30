@@ -5,18 +5,34 @@ import plotly.express as px
 import numpy as np
 from PIL import Image
 
-c4, c5, c6 = st.columns([0.2, 0.6, 0.2])
+st.set_page_config(page_title = 'Elecciones 2023 - Sitio de consulta',
+                        layout='wide', initial_sidebar_state='collapsed')
+st.markdown(
+        """
+       <style>
+       [data-testid="stSidebar"][aria-expanded="true"]{
+           min-width: 200px;
+           max-width: 200px;
+       }
+       """,
+        unsafe_allow_html=True,
+    )
+c4, c5, c6 = st.columns([0.1, 0.8, 0.1])
 
 votov1 = Image.open('data/votosvalidos.png')
 votov2 = Image.open('data/votosvalidos2.png')
 votonulo = Image.open('data/votosnulos.png')
 
 
+
 with c5:
-    st.markdown("<h1 style='text-align: center;'>Preguntas frecuentes sobre las elecciones</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Preguntas frecuentes sobre las elecciones<br><br><br></h1>", unsafe_allow_html=True)
 
     with st.expander('**¿Qué son las elecciones generales?**'):
         st.write("Son aquellas elecciones donde el electorado define entre las listas de candidatos y candidatas de las agrupaciones políticas quienes serán elegidos y elegidas para ocupar los cargos públicos electivos.")
+
+    with st.expander('**¿Cuántos votos necesita un candidato ganar en primera vuelta?**'):
+        st.write("Un candidato a presidente tendrá que cumplir con estas normas para ganar en primera vuelta: <br><br> Sacar más del 45% de los votos afirmativos válidamente emitidos.<br> Sacar el 40% de los votos afirmativos válidamente emitidos, con una diferencia de 10 puntos porcentuales sobre la fórmula que le sigue.")
 
     with st.expander('**¿Quiénes pueden votar?**'):
         st.write("Los ciudadanos y las ciudadanas que figuren en el padrón electoral y acrediten su identidad con documento habilitante.")
@@ -51,7 +67,7 @@ with c5:
         st.write("La Autoridad de Mesa debe verificar que existan en todo momento boletas de las agrupaciones políticas. Los/as fiscales las repondrán a pedido del Presidente/a de Mesa o, en su defecto, lo hará él/ella con las boletas de contingencia entregadas por el servicio de correo. En caso de que se agoten las boletas de contingencia, la responsabilidad de reponerlas es de los/as fiscales partidarios.")
 
     with st.expander('**¿Si no voté en las elecciones primarias, puedo votar en las elecciones generales?**'):
-        st.write("Sí, debe votar en las elecciones generales.")
+        st.write("Sí, debe votar en las elecciones generales.:gun::knive:")
 
     with st.expander('**El recorrido de tu voto**'):
         st.write("En el video de CIPPEC se muestra cómo es el proceso desde el momento en que emitís tu voto hasta la proclamación de candidatos/as electos/as.")
