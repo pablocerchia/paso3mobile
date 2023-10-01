@@ -28,7 +28,7 @@ cvbregman1 = Image.open('data/cvbregman.jpg')
 cvbregman = cvbregman1.resize((650, 900))
 
 banner_milei = Image.open('data/Javier Milei (La Libertad Avanza).png')
-banner_milei = banner_milei.resize((175, 900))
+banner_milei = banner_milei.resize((900, 175))
 
 st.set_page_config(page_title = 'Elecciones 2023 - Sitio de consulta',
                     layout='wide', initial_sidebar_state='collapsed')
