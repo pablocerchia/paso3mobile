@@ -53,6 +53,18 @@ def diputados():
     c4, c5, c6 = st.columns([0.1, 0.8, 0.1])
 
     with c5:
+
+        st.markdown("<h3 style='text-align: center;'>Qué vas a poder encontrar en esta sección<br></h3>", unsafe_allow_html=True)
+        st.markdown(
+                    """
+                    <div style="text-align:center; font-size: 1.5em;">Consultá y compará cómo le fue a las agrupaciones y a los candidatos a nivel diputados en cada provincia y sección electoral del país. A su vez podrás <a href='#proyect-cu-ntas-bancas-ganar-a-cada-partido-en-tu-provincia'>proyectar cuántas bancas ganaría cada partido</a> en las elecciones generales. Acá vas a poder informarte sobre cómo se compone la Cámara, <a href='#informate-sobre-los-candidatos-de-cada-agrupaci-n'>quién compone cada lista</a>, <a href='#qui-nes-terminan-su-mandato-en-2023'>quiénes terminan su mandato en 2023</a> y <a href='#qui-nes-componen-actualmente-la-c-mara-de-diputados'>quiénes son sus miembros actuales</a>. 
+                    <br>También vas a poder comparar <a href='#distribuci-n-por-edad-y-o-g-nero-de-los-candidatos'>la distribución de género y edad en las listas</a> de cada agrupación, 
+                    sumado a ver <a href='#qui-n-encabeza-m-s-las-listas-en-cada-agrupaci-n'>cuál género es el que encabeza más listas</a> en cada partido.</div>
+                    """,
+                    unsafe_allow_html=True
+                    )
+        sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='1667')
+        st.markdown("<h5 style='text-align: center;'><br></h5>", unsafe_allow_html=True)
         #st.markdown("<h1 style='text-align: center;'>Así está y así quedaría la Cámara de Diputados</h1>", unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center;'>EL PRESENTE Y FUTURO DE LA CÁMARA DE DIPUTADOS<br></h3>", unsafe_allow_html=True)
         st.markdown("<h5 style='text-align: center; font-weight: normal;'>Mirá cómo está compuesta hoy la cámara y cómo quedaría conformada si se repiten los resultados en octubre.<br></h5>", unsafe_allow_html=True)
@@ -69,20 +81,20 @@ def diputados():
         boton_depto_seccion1 = sac.buttons(['Por provincia','Por sección'], label=None, index=0, format_func=None, align='center', position='top', size='default', direction='horizontal', shape='round', compact=True, return_index=False, key=889)
         if tabs44 == 'Por agrupación':
             if boton_depto_seccion1 == 'Por provincia':
-                components.html("""<div class="flourish-embed" data-src="story/2025681" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                components.html("""<div class="flourish-embed" data-src="story/2025681" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
             if boton_depto_seccion1 == 'Por sección':
-                components.html("""<div class="flourish-embed" data-src="story/2026087" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                components.html("""<div class="flourish-embed" data-src="story/2026087" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
         if tabs44 == 'Por candidato':
             if boton_depto_seccion1 == 'Por provincia':
-                components.html("""<div class="flourish-embed" data-src="story/2035378" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                components.html("""<div class="flourish-embed" data-src="story/2035378" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
             if boton_depto_seccion1 == 'Por sección':
-                components.html("""<div class="flourish-embed" data-src="story/2035422" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                components.html("""<div class="flourish-embed" data-src="story/2035422" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
         sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='111')
         
-        st.subheader('¿Cómo se compone la Cámara?', anchor=False)
+        st.subheader('¿Cómo se compone la Cámara?')
         st.write("La cámara está integrada por 257 diputados nacionales quienes representan directamente al pueblo de la Nación. Tienen mandatos de cuatro años y pueden ser reelegidos. Son elegidos utilizando el sistema de representación proporcional D'Hondt en cada uno de los 24 distritos autónomos que integran la federación (23 provincias y la Ciudad Autónoma de Buenos Aires). Cada dos años la Cámara renueva la mitad de sus miembros. Para dar quórum se necesitan 129 diputados. ", unsafe_allow_html=True)
         sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='4')
-        st.subheader('Proyectá cuántas bancas ganaría cada partido en tu provincia', anchor=False)
+        st.subheader('Proyectá cuántas bancas ganaría cada partido en tu provincia')
         with st.expander("**¿Qué es el sistema de representación proporcional D'Hondt?**"):
             st.write("<br>Es una fórmula mediante la cual se determinan cuántas bancas se le asignará a cada partido político en cada distrito.", unsafe_allow_html=True)
             st.video('https://www.youtube.com/watch?v=kXbUXugLnlc')
@@ -170,7 +182,7 @@ def diputados():
                         st.write(f"{partido} obtendría {bancas} bancas.")
         
         sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='123')
-        st.subheader("Informate sobre los candidatos de cada agrupación", anchor=False)
+        st.subheader("Informate sobre los candidatos de cada agrupación")
         st.write("Filtrá por distrito y por agrupación para averiguar quiénes componen las listas de diputados.", help="La tabla también es interactiva. Haciendo click derecho en una columna se puede seleccionar si filtrarla, moverla, achicarla, etc.")
         c4, c5, c6= st.columns(3)
         ######################################
@@ -404,7 +416,7 @@ def diputados():
         totales_edad = totales_candidatos.groupby(['Age_Range'])['Totales'].sum().reset_index()
         gender_counts2 = totales_candidatos.groupby(['Género'])['Totales'].sum().reset_index()
         sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='222')
-        st.subheader("¿Quién encabeza más las listas en cada agrupación?", anchor=False)
+        st.subheader("¿Quién encabeza más las listas en cada agrupación?")
         st.write("Si bien según la Ley de Paridad de Género en Ámbitos de Representación Política (Ley 27.412) es obligatorio ubicar de manera intercalada mujeres y varones desde el primer candidato hasta el último candidato suplente, la disparidad de género sigue siendo posible porque las listas pueden estar predominantemente encabezadas por varones de manera legal.")
 
         enc1, enc2, enc3= st.columns(3)
@@ -438,7 +450,7 @@ def diputados():
         #st.subheader('¿Qué es un bloque y un interbloque?', anchor=False)
         #st.write("Un bloque es un conjunto de legisladores constituido de un modo formal generalmente a partir de afinidades políticas y/o partidarias. Mientras que un interbloque es una asociación de un conjunto de diversos bloques a partir de afinidades políticas y/o partidarias. No están definidos en el reglamento, pero refieren a grupos de bloques unidos por afinidades o frentes de coalición.")
         sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='2')
-        st.subheader('¿Quiénes terminan su mandato en 2023?', anchor=False)
+        st.subheader('¿Quiénes terminan su mandato en 2023?')
         st.write("Los siguientes diputados son quienes finalizan su mandato. A su vez, se puede observar cuantas bancas renueva cada bloque.")
         finalizan_mandato_DIPUTADOS = finalizan_mandato_DIPUTADOS.sort_values(by='INTERBLOQUE')
         gd = GridOptionsBuilder.from_dataframe(finalizan_mandato_DIPUTADOS)
@@ -548,7 +560,7 @@ def diputados():
                 st.plotly_chart(fig_bloques_dip, use_container_width=True, config=config)
 
         sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='3')
-        st.subheader('¿Quiénes componen actualmente la Cámara de Diputados?', anchor=False)
+        st.subheader('¿Quiénes componen actualmente la Cámara de Diputados?')
         st.write("Esta es una tabla que contiene a todos los diputados actuales. Más abajo podrás filtrar la tabla para ver la distribución por provincia, interbloque, etc.")
 
         #st.dataframe(lista_DIPUTADOS, hide_index=True, use_container_width=True)
@@ -695,6 +707,16 @@ def senadores():
     c11, c242, c33 = st.columns([0.1, 0.8, 0.1])
 
     with c242:
+        st.markdown("<h3 style='text-align: center;'>Qué vas a poder encontrar en esta sección<br></h3>", unsafe_allow_html=True)
+        st.markdown(
+                    """
+                    <div style="text-align:center; font-size: 1.5em;">Consultá y compará cómo le fue a las agrupaciones y a los candidatos a nivel senadores en cada provincia y sección electoral del país. Acá vas a poder informarte sobre cómo se compone la Cámara, <a href='#informate-sobre-los-candidatos-de-cada-agrupaci-n'>quién compone cada lista</a>, <a href='#qui-nes-terminan-su-mandato-en-2023'>quiénes terminan su mandato en 2023</a> y <a href='#qui-nes-componen-actualmente-el-senado'>quiénes son sus miembros actuales</a>. 
+                    También vas a poder comparar <a href='#distribuci-n-por-edad-y-o-g-nero-de-los-candidatos'>la distribución de género y edad en las listas</a> de cada agrupación, 
+                    sumado a ver <a href='#cu-l-g-nero-encabeza-m-s-las-listas-en-cada-agrupaci-n'>cuál género es el que encabeza más listas</a> en cada partido.</div>
+                    """,
+                    unsafe_allow_html=True
+                    )
+        sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='66637')
         st.markdown("<h3 style='text-align: center;'>EL PRESENTE Y FUTURO DE LA CÁMARA DE SENADORES<br></h3>", unsafe_allow_html=True)
         st.markdown("<h5 style='text-align: center; font-weight: normal;'>Mirá cómo está compuesta hoy la cámara y cómo quedaría conformada si se repiten los resultados en octubre.<br></h5>", unsafe_allow_html=True)
         c412, c533, c645 = st.columns([0.2, 0.6, 0.2])
@@ -717,11 +739,11 @@ def senadores():
         sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='111')
         #st.title('Cámara de Senadores')
         
-        st.subheader('¿Cómo se compone la Cámara?', anchor=False)
+        st.subheader('¿Cómo se compone la Cámara?')
         st.write("La Cámara de Senadores se compone de 72 integrantes, los cuales tienen un mandato de seis años. tres por cada provincia y tres por la Ciudad Autónoma de Buenos Aires. Todos los distritos tienen igual representación. Corresponden dos bancas al partido mayoritario y una al que le sigue en cantidad de votos obtenidos. Cada dos años se renueva un tercio de la cámara, es decir, se renuevan 24 bancas. Formalmente los senadores están organizados por bloques, los cuales a su vez pueden formar alianzas entre sí (en el gráfico de arriba se visualizan las alianzas pero a continuación se tratará a cada bloque por separado). Para dar quórum se necesitan 37 senadores.")
         sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='6')
         ########################################################################################################################################
-        st.subheader("Informate sobre los candidatos de cada agrupación", anchor=False)
+        st.subheader("Informate sobre los candidatos de cada agrupación")
         st.write("Filtrá por distrito y por agrupación para averiguar quiénes fueron los candidatos en tu distrito.", help="La tabla también es interactiva. Haciendo click derecho en una columna se puede seleccionar si filtrarla, moverla, achicarla, etc.")
         c4, c5, c6= st.columns(3)
         ######################################
@@ -955,7 +977,7 @@ def senadores():
         totales_edad = totales_candidatos.groupby(['Age_Range'])['Totales'].sum().reset_index()
         gender_counts2 = totales_candidatos.groupby(['Género'])['Totales'].sum().reset_index()
         sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='222')
-        st.subheader("¿Quién encabeza más las listas en cada agrupación?", anchor=False)
+        st.subheader("¿Cuál género encabeza más las listas en cada agrupación?")
         st.write("Si bien según la Ley de Paridad de Género en Ámbitos de Representación Política (Ley 27.412) es obligatorio ubicar de manera intercalada mujeres y varones desde el primer candidato hasta el último candidato suplente, la disparidad de género sigue siendo posible porque las listas pueden estar predominantemente encabezadas por varones de manera legal.")
 
         enc1, enc2, enc3 = st.columns(3)
@@ -982,7 +1004,7 @@ def senadores():
                 title=f"<b>DISTRIBUCIÓN DE GÉNERO PARA LAS LISTAS DE {ap_encabeza} </b><br><sup>Según qué género las encabeza - Elecciones PASO 2023</sup>")
         st.plotly_chart(fig_encabezan, use_container_width=True)
         sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='232')
-        st.subheader('¿Quiénes terminan su mandato en 2023?', anchor=False)
+        st.subheader('¿Quiénes terminan su mandato en 2023?')
         st.write("Los siguientes senadores son quienes finalizan su mandato. A su vez, se puede observar cuantas bancas renueva cada bloque.")
         finalizan_mandato = finalizan_mandato.sort_values(by='BLOQUE')
     #gd.configure_pagination(enabled=True)
@@ -1079,7 +1101,7 @@ def senadores():
         fig_bloques.update_traces(hovertemplate='Bloque: %{y}<br>Bancas a renovar: %{x}<br>', hoverlabel=dict(namelength=0))
         st.plotly_chart(fig_bloques, use_container_width=True, config=config)
         sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='76')
-        st.subheader('¿Quiénes componen actualmente el Senado?', anchor=False)
+        st.subheader('¿Quiénes componen actualmente el Senado?')
         st.write("Esta es una tabla que contiene a todos los senadores actuales donde podrás filtrar la tabla para ver la distribución por provincia, bloque, etc.")
 
         # st.dataframe(lista_senadores2, hide_index=True, use_container_width=True)
