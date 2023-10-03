@@ -352,20 +352,39 @@ def presidentes():
             st.markdown("<h3 style='text-align: center;'>MIRADA EN DETALLE: CONURBANO BONAERENSE<br></h3>", unsafe_allow_html=True)
             st.markdown("<h5 style='text-align: center; font-weight: normal;'>En los 24 partidos del Conurbano viven más de 10 millones de personas, lo cual representa <br> el 25% de la población del país y el 64% de la población de Buenos Aires.<br></h5>", unsafe_allow_html=True)
             #st.write("En los 24 partidos del Conurbano Bonaerense viven 10.894.664 personas, lo cual representa el 25% de la población del país y el 64% de la población de la provincia de Buenos Aires.")
-            mapa777, mapa77789, mapa636 = st.columns([0.2, 0.6, 0.2])
-            with mapa77789:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15079086" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
-            #sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='4692')
-            #st.markdown("<h3 style='text-align: center;'><br><br>MIRÁ CÓMO LE FUE A CADA AGRUPACIÓN<br></h3>", unsafe_allow_html=True)
-            #st.subheader("Rendimiento individual de cada agrupación en el conurbano:")
-            mapa1116, mapa2226, mapa3336 = st.columns([0.33, 0.34, 0.33])
+            tabs_sac_conurbano = sac.buttons(['Por sección','Por circuito'], label=None, index=0, format_func=None, align='center', position='top', size='default', direction='horizontal', shape='round', compact=True, return_index=False, key=88892)
             
-            with mapa1116:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15099425" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
-            with mapa2226: 
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15099497" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
-            with mapa3336:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15099721" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+            if tabs_sac_conurbano == "Por sección":
+                mapa7772, mapa777892, mapa6362 = st.columns([0.2, 0.6, 0.2])
+                with mapa777892:
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15021860" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
+                #sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='4692')
+                #st.markdown("<h3 style='text-align: center;'><br><br>MIRÁ CÓMO LE FUE A CADA AGRUPACIÓN<br></h3>", unsafe_allow_html=True)
+                #st.subheader("Rendimiento individual de cada agrupación en el conurbano:")
+                mapa11162, mapa22262, mapa33362 = st.columns([0.33, 0.34, 0.33])
+                
+                with mapa11162:
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15022051" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
+                with mapa22262: 
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15022083" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
+                with mapa33362:
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15022152" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
+            
+            if tabs_sac_conurbano == "Por circuito":
+                mapa777, mapa77789, mapa636 = st.columns([0.2, 0.6, 0.2])
+                with mapa77789:
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15079086" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
+                #sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='4692')
+                #st.markdown("<h3 style='text-align: center;'><br><br>MIRÁ CÓMO LE FUE A CADA AGRUPACIÓN<br></h3>", unsafe_allow_html=True)
+                #st.subheader("Rendimiento individual de cada agrupación en el conurbano:")
+                mapa1116, mapa2226, mapa3336 = st.columns([0.33, 0.34, 0.33])
+                
+                with mapa1116:
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15099425" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
+                with mapa2226: 
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15099497" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
+                with mapa3336:
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15099721" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
             sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='4126') 
             #st.subheader('Compará cómo les fue en CABA', anchor=False)
             st.markdown("<h3 style='text-align: center;'>RESULTADOS DE LAS PRINCIPALES AGRUPACIONES EN CABA<br></h3>", unsafe_allow_html=True)
@@ -549,17 +568,33 @@ def presidentes():
             sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='492') 
             st.markdown("<h3 style='text-align: center;'>MIRADA EN DETALLE: CONURBANO BONAERENSE<br></h3>", unsafe_allow_html=True)
             st.markdown("<h5 style='text-align: center; font-weight: normal;'>En los 24 partidos del Conurbano viven más de 10 millones de personas, lo cual representa <br> el 25% de la población del país y el 64% de la población de Buenos Aires.<br></h5>", unsafe_allow_html=True)
-            mapa7772, mapa777891, mapa6362 = st.columns([0.2, 0.6, 0.2])
-            with mapa777891:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15100118" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
-            mapa11164, mapa22264, mapa33364 = st.columns([0.33, 0.34, 0.33])
+            tabs_sac_conurbano_candidato = sac.buttons(['Por sección','Por circuito'], label=None, index=0, format_func=None, align='center', position='top', size='default', direction='horizontal', shape='round', compact=True, return_index=False, key=88872)
             
-            with mapa11164:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15100553" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
-            with mapa22264: 
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15119684" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
-            with mapa33364:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15121109" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+            if tabs_sac_conurbano_candidato == "Por sección":
+                mapa77721, mapa7778911, mapa63621 = st.columns([0.2, 0.6, 0.2])
+                with mapa7778911:
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15022443" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
+                mapa111641, mapa222641, mapa333641 = st.columns([0.33, 0.34, 0.33])
+                
+                with mapa111641:
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15022592" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
+                with mapa222641: 
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15023006" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
+                with mapa333641:
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15023032" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
+            
+            if tabs_sac_conurbano_candidato == "Por circuito":
+                mapa7772, mapa777891, mapa6362 = st.columns([0.2, 0.6, 0.2])
+                with mapa777891:
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15100118" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
+                mapa11164, mapa22264, mapa33364 = st.columns([0.33, 0.34, 0.33])
+                
+                with mapa11164:
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15100553" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
+                with mapa22264: 
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15119684" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
+                with mapa33364:
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15121109" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
             sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='4126') 
             st.markdown("<h3 style='text-align: center;'>RESULTADOS DE LOS PRINCIPALES CANDIDATOS EN CABA<br></h3>", unsafe_allow_html=True)
             st.markdown("<h5 style='text-align: center; font-weight: normal;'>Mirá dónde se hicieron fuertes y dónde tienen terreno por ganar los principales candidatos en la capital del país.<br></h5>", unsafe_allow_html=True)
