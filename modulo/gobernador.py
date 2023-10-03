@@ -9,8 +9,20 @@ import streamlit_antd_components as sac
 
 
 def gobernadores():
+    
+    st.markdown("<h3 style='text-align: center;'>Qué vas a poder encontrar en esta sección<br></h3>", unsafe_allow_html=True)
+    st.markdown(
+                    """
+                    <div style="text-align:center; font-size: 1.5em;">Consultá y compará cómo le fue a las agrupaciones y a los candidatos para gobernador en cada sección electoral de la provincia de Buenos Aires. 
+                    Además, podés comparar en detalle sus resultados en cada sección y circuito electoral del <a href='#el-conurbano-la-clave-del-xito-de-kicillof'>Conurbano Bonaerense</a>.
+                    También vas a poder consultar cómo les fue en cada <a href='#consult-los-resultados-en-cada-secci-n-electoral-provincial'>sección provincial</a>.</div>
+                    """,
+                    unsafe_allow_html=True
+                    )
+    sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='1667')
+
     tabs = sac.buttons(['Por agrupación','Por candidato'], label=None, index=0, format_func=None, align='center', position='top', size='large', direction='horizontal', shape='round', compact=False, return_index=False)
-    st.markdown("""<style>.css-zt5igj svg{display:none}</style>""", unsafe_allow_html=True)
+    #st.markdown("""<style>.css-zt5igj svg{display:none}</style>""", unsafe_allow_html=True)
 
     if tabs == 'Por agrupación':
 
@@ -39,7 +51,7 @@ def gobernadores():
                 sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='412') 
                 st.markdown("<h3 style='text-align: center;'>EL CONURBANO: LA CLAVE DEL ÉXITO DE KICILLOF.<br></h3>", unsafe_allow_html=True)
                 #st.subheader('EL CONURBANO: La clave del éxito de Kicillof. Compará cómo les fue a las agrupaciones en el conurbano a nivel circuito electoral', anchor=False)
-                st.markdown("<h5 style='text-align: center; font-weight: normal;'>En el Conurbano viven 10 millones de personas, es decir, el 64% de la población de la provincia de Buenos Aires. En el gráfico de arriba se ve como la provincia está casi en su totalidad pintada de amarilla. A primera vista eso parece indicar una victoria demoledora de Juntos por el Cambio. <br><br> Sin embargo, los mejores resultados de UxP se dieron allí donde la densidad poblacional es mayor. El resultado victorioso en las PASO 2023 de Unión por la Patria se explica a partir de su sólido rendimiento en ciertos municipios del Conurbano Bonaerense.<br></h5>", unsafe_allow_html=True)
+                st.markdown("<h5 style='text-align: center; font-weight: normal;'>En el Conurbano viven 10 millones de personas, es decir, el 64% de la población de la provincia de Buenos Aires. En el gráfico de arriba se ve como la provincia está casi en su totalidad pintada de amarilla. A primera vista eso parece indicar una victoria demoledora de Juntos por el Cambio. <br><br> Sin embargo, los mejores resultados de Unión por la Patria se dieron allí donde la densidad poblacional es mayor. El resultado victorioso en las PASO 2023 del peronismo se explica a partir de su sólido rendimiento en ciertos municipios del Conurbano Bonaerense.<br></h5>", unsafe_allow_html=True)
                 #st.write("En el Conurbano viven 10 millones de personas, es decir, el 64% de la población de la provincia de Buenos Aires. En el gráfico de arriba se ve como la provincia está casi en su totalidad pintada de amarilla. A primera vista eso parece indicar una victoria demoledora de Juntos por el Cambio. Sin embargo, los mejores resultados de UxP se dieron allí donde la densidad poblacional es mayor. El resultado victorioso en las PASO 2023 de Unión por la Patria se explica a partir de su sólido rendimiento en ciertos municipios del Conurbano Bonaerense.")
                 mapa777, mapa77789, mapa636, mapa555999 = st.columns([0.1, 0.4, 0.4, 0.1])
                 
@@ -129,4 +141,4 @@ def gobernadores():
                             components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15118425" data-height="850px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=850)
                         with charts2:
                             components.html("""<div style="min-height:428px"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/xDOxR/embed.js?v=2" charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/xDOxR/full.png" alt="" /></noscript></div>""",height=480)
-                            components.html("""<div style="min-height:364px"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/tqust/embed.js?v=2" charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/tqust/full.png" alt="" /></noscript></div>""",height=380)                                                         
+                            components.html("""<div style="min-height:364px"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/tqust/embed.js?v=2" charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/tqust/full.png" alt="" /></noscript></div>""",height=380)   
