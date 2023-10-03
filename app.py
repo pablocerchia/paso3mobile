@@ -1,17 +1,12 @@
-st.set_page_config(page_title='Elecciones 2023 - Página de consulta', layout='wide')
 import streamlit as st
 from streamlit_option_menu import option_menu
-from modulo.bancas import diputados, senadores
-from modulo.presidentes import presidentes
-from modulo.gobernador import gobernadores
 from modulo.resultadostodos import resultados
 from modulo.dondevoto import donde_voto
 from modulo.faq import faq
-from modulo.mesa import mesa
 from modulo.electores import electores
 from modulo.plataformas import propuestas
 
-
+st.set_page_config(page_title='Elecciones 2023 - Página de consulta', layout='wide')
 st.write("#")
 st.markdown("""
         <style>
