@@ -1,3 +1,4 @@
+st.set_page_config(page_title='Elecciones 2023 - Página de consulta', layout='wide')
 import streamlit as st
 from streamlit_option_menu import option_menu
 from modulo.bancas import diputados, senadores
@@ -10,8 +11,18 @@ from modulo.mesa import mesa
 from modulo.electores import electores
 from modulo.plataformas import propuestas
 
-st.set_page_config(page_title='Elecciones 2023 - Página de consulta', layout='wide')
+
 st.write("#")
+st.markdown("""
+        <style>
+               .block-container {
+                    padding-top: 1rem;
+                    padding-bottom: 0rem;
+                    padding-left: 5rem;
+                    padding-right: 5rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
 
 # selected2 = option_menu("Elecciones 2023", ["Resultados", "Resultados en tu mesa", "Propuestas", "Electores", 'Preguntas frecuentes', "¿Dónde voto?"], 
 #     icons=['bar-chart','search', 'card-list', "people", 'patch-question', "envelope-paper"], 
@@ -25,7 +36,7 @@ st.write("#")
 # }
 
 menu = {
-    'title': "Elecciones 2023 - Info de calidad pa",
+    'title': "Elecciones 2023",
     'items': { 
         'Resultados' : {
             'action': resultados, 'item_icon': 'bar-chart'
