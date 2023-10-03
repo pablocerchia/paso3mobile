@@ -20,6 +20,7 @@ def presidentes():
     votos_candidatos_totales = pd.read_csv("data/votos_candidatos_totales.csv")
     listas_x_prov = pd.read_csv("data/resultados_por_lista_CLEAN.csv")
     fuente_votos = pd.read_csv("data/fuente.csv")
+    fuente_votos = fuente_votos[['Distrito','Electores', 'La Libertad Avanza', 'Juntos por el Cambio', 'Unión por la Patria']]
 
     c1998, c1997, c1996 = st.columns([0.1,0.8,0.1])
 
