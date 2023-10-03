@@ -11,7 +11,7 @@ from modulo.electores import electores
 from modulo.plataformas import propuestas
 
 st.set_page_config(page_title='Elecciones 2023 - Página de consulta', layout='wide')
-
+st.write("#")
 
 # selected2 = option_menu("Elecciones 2023", ["Resultados", "Resultados en tu mesa", "Propuestas", "Electores", 'Preguntas frecuentes', "¿Dónde voto?"], 
 #     icons=['bar-chart','search', 'card-list', "people", 'patch-question', "envelope-paper"], 
