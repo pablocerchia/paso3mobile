@@ -9,9 +9,10 @@ import streamlit_antd_components as sac
 
 
 def gobernadores():
-    
-    st.markdown("<h3 style='text-align: center;'>Qué vas a poder encontrar en esta sección<br></h3>", unsafe_allow_html=True)
-    st.markdown(
+    c116, c117, c118 = st.columns([0.1,0.8,0.1])
+    with c117:
+        st.markdown("<h3 style='text-align: center;'>Qué vas a poder encontrar en esta sección<br></h3>", unsafe_allow_html=True)
+        st.markdown(
                     """
                     <div style="text-align:center; font-size: 1.5em;">Consultá y compará cómo le fue a las agrupaciones y a los candidatos para gobernador en cada sección electoral de la provincia de Buenos Aires. 
                     Además, podés comparar en detalle sus resultados en cada sección y circuito electoral del <a href='#el-conurbano-la-clave-del-xito-de-kicillof'>Conurbano Bonaerense</a>.
@@ -19,9 +20,9 @@ def gobernadores():
                     """,
                     unsafe_allow_html=True
                     )
-    sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='1667')
+        sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='1667')
 
-    tabs = sac.buttons(['Por agrupación','Por candidato'], label=None, index=0, format_func=None, align='center', position='top', size='large', direction='horizontal', shape='round', compact=False, return_index=False)
+        tabs = sac.buttons(['Por agrupación','Por candidato'], label=None, index=0, format_func=None, align='center', position='top', size='large', direction='horizontal', shape='round', compact=False, return_index=False)
     #st.markdown("""<style>.css-zt5igj svg{display:none}</style>""", unsafe_allow_html=True)
 
     if tabs == 'Por agrupación':
@@ -142,3 +143,4 @@ def gobernadores():
                         with charts2:
                             components.html("""<div style="min-height:428px"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/xDOxR/embed.js?v=2" charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/xDOxR/full.png" alt="" /></noscript></div>""",height=480)
                             components.html("""<div style="min-height:364px"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/tqust/embed.js?v=2" charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/tqust/full.png" alt="" /></noscript></div>""",height=380)   
+
