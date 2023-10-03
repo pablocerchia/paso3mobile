@@ -15,3 +15,4 @@ fpdf
 openai
 tiktoken
 streamlit_antd_components
+streamlit_option_menu
