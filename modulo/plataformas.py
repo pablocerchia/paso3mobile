@@ -18,7 +18,7 @@ def propuestas():
   import os
   from fpdf import FPDF
   from PIL import Image
-  #
+  st.markdown("""<style>.css-zt5igj svg{display:none}</style>""", unsafe_allow_html=True)
 
 
   cvmilei1 = Image.open('data/cvmilei.jpg')
@@ -76,9 +76,7 @@ def propuestas():
   with open("data/FIT.pdf", "rb") as pdf_file:
       PDF_FIT = pdf_file.read()
 
-  st.markdown("<h1 style='text-align: center;'>Propuestas de los candidatos presidenciales</h1>", unsafe_allow_html=True)
-
-
+  
   c1, c2, c3 = st.columns([0.1,0.8,0.1])
 
   milei_fmi_1 = "https://www.infobae.com/politica/2023/09/14/javier-milei-hablo-de-su-reunion-con-el-fmi-fui-muy-claro-la-deuda-se-paga/"
@@ -97,15 +95,19 @@ def propuestas():
   milei_ddhh1 = "https://www.instagram.com/p/CxK4DhGuepC/?img_index=1"
   milei_ddhh2 = "https://www.perfil.com/noticias/politica/que-piensa-victoria-villarruel-del-terrorismo-de-estado-y-como-lo-uso-como-plataforma-politica.phtml"
   milei_malvinas = "https://www.perfil.com/noticias/actualidad/milei-entre-el-shabat-en-miami-y-el-encuentro-con-luis-barrionuevo.phtml"
+  milei_fantino = "https://www.youtube.com/watch?v=5Z8JRRIhRAo"
 
   with c2:
+    st.markdown("<h3 style='text-align: center;'>PROPUESTAS DE LOS CANDIDATOS PRESIDENCIALES<br></h3>", unsafe_allow_html=True)
+    st.markdown("<h5 style='text-align: center; font-weight: normal;'>Conocé qué es lo que propone cada candidato sobre los temas más importantes. A esto se le suma una sección donde se recopilan distintas notas en los medios que dieron en las últimas semanas.<br> A su vez podrás consultar el curriculum de cada uno y acceder a la plataforma electoral que cada candidato propone, así como también a sus redes sociales. <br><br></h5>", unsafe_allow_html=True)
+
       
     st.markdown("<h2 style='text-align: center;'>Javier Milei (La Libertad Avanza)</h2>", unsafe_allow_html=True)
     with st.expander('📈 **Economía**'):
           st.markdown('<div style="text-align: justify;"><br> <b>Para concretar la reforma integral que se propone se necesitarán 35 años, divididos en tres etapas sucesivas</b>.<br><br> <b>Primera etapa:</b> fuerte recorte del gasto público del Estado y una <b>reforma tributaria que empuje una baja de los impuestos</b>, la <b>flexibilización laboral</b> para la creación de empleos en el sector privado y una <b>apertura unilateral al comercio internacional</b>. Ello acompañado por una reforma financiera impulse una banca libre y desregulada junto a la libre competencia de divisas. <br><br> <b>Segunda etapa:</b> se propone una <b>reforma previsional para recortar el gasto del estado en jubilaciones y pensiones</b> de los ítems que más empujan el déficit fiscal alentando un sistema de capitalización privado, junto a un programa de retiros voluntarios de empleados públicos y achicamiento del estado. <br> Por otro lado se propone <b>reducir el número de ministerios a 8.</b>  En esta etapa <b>comenzarán a eliminarse de forma progresiva los planes sociales</b> a medida que se generen otros ingresos como consecuencia de la creación de puestos de trabajos en el sector privado, liquidación del Banco Central de la República Argentina, estableciendo un sistema de banca Simons, con encajes al 100% para depósitos a la vista. <br><br> <b>Tercera etapa:</b> reforma profunda del sistema de salud con impulso del sistema privado, competitividad libre entre empresas del sector, una reforma del sistema educativo y la ampliación de un sistema de seguridad no invasivo para la población y la eliminación de la coparticipación.<br></div>', unsafe_allow_html=True)
           #st.write("<br> **Para concretar la reforma integral que se propone se necesitarán 35 años, divididos en tres etapas sucesivas**.<br><br> **Primera etapa:** fuerte recorte del gasto público del Estado y una **reforma tributaria que empuje una baja de los impuestos**, la **flexibilización laboral** para la creación de empleos en el sector privado y una **apertura unilateral al comercio internacional**. Ello acompañado por una reforma financiera impulse una banca libre y desregulada junto a la libre competencia de divisas. <br><br> **Segunda etapa:** se propone una **reforma previsional para recortar el gasto del estado en jubilaciones y pensiones** de los ítems que más empujan el déficit fiscal alentando un sistema de capitalización privado, junto a un programa de retiros voluntarios de empleados públicos y achicamiento del estado. <br> Por otro lado se propone **reducir el número de ministerios a 8.**  En esta etapa **comenzarán a eliminarse de forma progresiva los planes sociales** a medida que se generen otros ingresos como consecuencia de la creación de puestos de trabajos en el sector privado, liquidación del Banco Central de la República Argentina, estableciendo un sistema de banca Simons, con encajes al 100% para depósitos a la vista. <br><br> **Tercera etapa:** reforma profunda del sistema de salud con impulso del sistema privado, competitividad libre entre empresas del sector, una reforma del sistema educativo y la ampliación de un sistema de seguridad no invasivo para la población y la eliminación de la coparticipación.", unsafe_allow_html=True)
     with st.expander('⚕️ **Salud**'):
-      st.markdown('<div style="text-align: justify;"><br> <b>Los ministerios de Salud, Desarrollo Social, Trabajo y Educación de la Nación serían condensados en una única cartera llamada Capital Humano.</b> <br><br> Para LLA, <b>el mejor sistema de salud posible es un sistema de salud privado donde cada argentino pague sus servicios</b>. Reformar profundamente el sistema de salud con impulso del sistema privado, competitividad libre entre empresas del sector y mejorar la estructura edilicia hospitalaria.<br><br>  <b>Arancelar todas las prestaciones</b> y auto gestionar el servicio de salud el servicio de salud en trabajos compartidos con la salud privada.<br><br>  <b>Proteger al niño desde la concepción:</b> Están en contra de la Ley de Interrupción Voluntaria del Embarazo y planean hacer un plebiscito para ver si mantener o eliminar la ley.<br><br>  <b>Modificar la Ley de Salud Mental</b> y desarrollar programas de prevención para los trastornos adictivos, educativos y de la personalidad.<br><br> <b>Obras sociales:</b> se buscará a nivel nacional liberar la cautividad de los afiliados a los seguros sociales de salud (obras sociales nacionales y PAMI, entre otras) para que la gente elija libremente, estableciendo una libre competencia. Por ejemplo, un jubilado podría elegir cualquier otra obra social que no sea el PAMI.<br><br> <b>Regular la documentación de extranjeros que trabajen en salud</b> y exigir a los turistas extranjeros que cuenten con un seguro de salud.<br></div>', unsafe_allow_html=True)
+      st.markdown('<div style="text-align: justify;"><br> <b>Los ministerios de Salud, Desarrollo Social, Trabajo y Educación de la Nación serían condensados en una única cartera llamada Capital Humano.</b> <br><br> Para LLA, <b>el mejor sistema de salud posible es uno privado donde cada argentino pague sus servicios</b>. Reformar profundamente el sistema de salud con impulso del sistema privado, competitividad libre entre empresas del sector y mejorar la estructura edilicia hospitalaria.<br><br>  <b>Arancelar todas las prestaciones</b> y auto gestionar el servicio de salud el servicio de salud en trabajos compartidos con la salud privada.<br><br>  <b>Proteger al niño desde la concepción:</b> Están en contra de la Ley de Interrupción Voluntaria del Embarazo y planean hacer un plebiscito para ver si mantener o eliminar la ley.<br><br>  <b>Modificar la Ley de Salud Mental</b> y desarrollar programas de prevención para los trastornos adictivos, educativos y de la personalidad.<br><br> <b>Obras sociales:</b> se buscará a nivel nacional liberar la cautividad de los afiliados a los seguros sociales de salud (obras sociales nacionales y PAMI, entre otras) para que la gente elija libremente, estableciendo una libre competencia. Por ejemplo, un jubilado podría elegir cualquier otra obra social que no sea el PAMI.<br><br> <b>Regular la documentación de extranjeros que trabajen en salud</b> y exigir a los turistas extranjeros que cuenten con un seguro de salud.<br></div>', unsafe_allow_html=True)
       #st.write("<br> **Los ministerios de Salud, Desarrollo Social, Trabajo y Educación de la Nación serían condensados en una única cartera llamada Capital Humano.** <br><br> Para LLA, **el mejor sistema de salud posible es un sistema de salud privado donde cada argentino pague sus servicios**. Reformar profundamente el sistema de salud con impulso del sistema privado, competitividad libre entre empresas del sector y mejorar la estructura edilicia hospitalaria.<br><br>  **Arancelar todas las prestaciones** y auto gestionar el servicio de salud el servicio de salud en trabajos compartidos con la salud privada.<br><br>  **Proteger al niño desde la concepción:** Están en contra de la Ley de Interrupción Voluntaria del Embarazo y planean hacer un plebiscito para ver si mantener o eliminar la ley.<br><br>  **Modificar la Ley de Salud Mental** y desarrollar programas de prevención para los trastornos adictivos, educativos y de la personalidad.<br><br> **Obras sociales:** se buscará a nivel nacional liberar la 'cautividad' de los afiliados a los seguros sociales de salud (obras sociales nacionales y PAMI, entre otras) para que la gente elija libremente, estableciendo una libre competencia. Por ejemplo, un jubilado podría elegir cualquier otra obra social que no sea el PAMI.<br><br> **Regular la documentación de extranjeros que trabajen en salud** y exigir a los turistas extranjeros que cuenten con un seguro de salud. ", unsafe_allow_html=True)
     with st.expander('📖 **Educación**'):
       st.markdown('<div style="text-align: justify;"><br> <b>Sistema de vouchers.</b> Descentralizar la educación entregando el presupuesto a los padres, en lugar de dárselo al ministerio, financiando la demanda.<br><br> <b>Eliminar la obligatoriedad de la ESI</b> en todos los niveles de enseñanza. <br><br> Generar competencia entre las instituciones educativas desde lo curricular en todos los niveles de educación, incorporando más horas de materias como matemática, lengua, ciencias, tic o por la orientación y/o infraestructura.<br><br>  <b>Promover una transformación curricular donde se promueva un enfoque pedagógico por habilidades</b>, que va más allá de la simple transmisión del conocimiento. Aplicando modificaciones que orienten a los estudiantes a las profesiones necesarias para el país (ingenieros, informáticos).<br><br>  Crear la carrera docente de nivel universitario y la carrera de directivos y supervisores.<br></div>', unsafe_allow_html=True)
@@ -134,6 +136,7 @@ def propuestas():
       st.write("<br> **Salud:** <br> [Entrevista - Su plan para la salud pública (A24)](%s)" % milei_salud1, unsafe_allow_html=True)
       st.write("[Viabilidad de su plan sanitario' (La Nación)](%s)" % milei_salud2, unsafe_allow_html=True)
       st.write("<br> **Malvinas:** <br> [Milei avaló los dichos de Diana Mondino sobre las islas Malvinas y los derechos de los isleños (Perfil)](%s)" % milei_malvinas, unsafe_allow_html=True)
+      st.write("<br> **Entrevista con Fantino:** <br> [Entrevista con Alejandro Fantino (Neura Media)](%s)" % milei_fantino, unsafe_allow_html=True)
     with st.expander('📄 **Currículum Vitae**'):
       c144, c244, c44 = st.columns([0.2,0.6,0.2])
       with c244:
@@ -166,6 +169,7 @@ def propuestas():
     massa_fmi6 = "https://www.perfil.com/noticias/politica/sergio-massa-le-vamos-a-pagar-al-fmi-para-que-se-vaya-de-argentina-y-nos-dejen-decidir-de-manera-soberana.phtml"
     massa_seguridad = "https://www.diarioelzondasj.com.ar/296767-exclusivo-el-plan-seguridad-inteligente-de-massa"
     massa_vivienda = "https://www.tiempodesanjuan.com/economia/el-gobierno-abrio-un-registro-familias-que-necesiten-lotes-viviendas-y-agricultura-n358368"
+    massa_fantino = "https://www.youtube.com/watch?v=n22g0O_q2A8"
 
     st.markdown("<h2 style='text-align: center;'>Sergio Massa (Unión por la Patria)</h2>", unsafe_allow_html=True)
     with st.expander('📈 **Economía**'):
@@ -201,6 +205,7 @@ def propuestas():
       st.write("<br> **Malvinas:** <br> [El 'canciller' de Massa le respondió a la candidata de Milei: 'Ellos piden que se respete a los kelpers, nosotros pedimos que se respete a los caídos'. (El Cronista)](%s)" % massa_malvinas, unsafe_allow_html=True)
       st.write("[Respuesta desde el gobierno a Diana Mondino (La Nación)](%s)" % massa_malvinas2, unsafe_allow_html=True)
       st.write("<br> **Fallo de YPF:** <br> [Massa criticó el fallo estadounidense contra Argentina por YPF: 'Viola y vulnera nuestra soberanía' (Ámbito)](%s)" % massa_ypf, unsafe_allow_html=True)
+      st.write("<br> **Entrevista con Fantino:** <br> [Entrevista con Alejandro Fantino (Neura Media)](%s)" % massa_fantino, unsafe_allow_html=True)
     with st.expander('📄 **Currículum Vitae**'):
       c1445, c2445, c445 = st.columns([0.2,0.6,0.2])
       with c2445:
@@ -224,6 +229,7 @@ def propuestas():
     bullrich_ypf = "https://www.letrap.com.ar/politica/el-fallo-ypf-ring-un-duro-cruce-patricia-bullrich-axel-kicillof-n5402979"
     bullrich_ypf2 = "https://www.clarin.com/politica/patricia-bullrich-fallo-ypf-kicillof-hizo-canchero-dijo-pagaba-pesos-ahora-cuesta-16-mil-millones-dolares_0_Yisbg8Z0ct.html"
     bimonetarismo = "https://www.ambito.com/finanzas/bimonetarismo-como-es-el-modelo-que-proponen-bullrich-y-melconian-n5807299"
+    bullrich_fantino = "https://www.youtube.com/watch?v=4b-gyeFQw_M&t=6s"
 
 
 
@@ -255,7 +261,7 @@ def propuestas():
       st.write("[Comparación con lo que proponen los otros 4 candidatos (TN)](%s)" % bullrich_agro2, unsafe_allow_html=True)
       st.write("<br> **Fallo YPF:** <br> [Bullrich: 'Que la guita la ponga el kirchnerismo' (Letra P)](%s)" % bullrich_ypf, unsafe_allow_html=True)
       st.write("[Bullrich: 'Kicillof se hizo el canchero y dijo que lo pagaba en pesos y ahora cuesta 16 mil millones de dólares' (Clarín)](%s)" % bullrich_ypf2, unsafe_allow_html=True)
-
+      st.write("<br> **Entrevista con Fantino:** <br> [Entrevista con Alejandro Fantino (Neura Media)](%s)" % bullrich_fantino, unsafe_allow_html=True)
     with st.expander('📄 **Currículum Vitae**'):
       c1446, c2446, c446 = st.columns([0.2,0.6,0.2])
       with c2446:
@@ -302,7 +308,8 @@ def propuestas():
       with c24467:
         st.image(cvschia)
     with st.expander('🔍 **Si querés saber más sobre sus propuestas...**'):
-      st.write("<br> **Sitio oficial:** https://www.hacemospornuestropais.ar/ <br><br> **Youtube:** https://www.youtube.com/@HacemosporNuestroPais<br><br>", unsafe_allow_html=True)
+      st.write("<br> **Sitio oficial:** https://www.hacemospornuestropais.ar/ <br><br> **Youtube:** https://www.youtube.com/@HacemosporNuestroPais<br><br> **Plataforma electoral:** <br>", unsafe_allow_html=True)
+      st.link_button("Descargar PDF", "https://drive.google.com/drive/folders/1HFzPjCLfXTwg7kyEOZGb35Dx-jdMj59l?usp=sharing")
 
     breg_fmi = "https://jacobinlat.com/2023/08/11/un-mensaje-contundente-contra-el-ajuste-y-el-sometimiento-al-fmi/"
     breg_fmi2 = "https://www.laizquierdadiario.com/Del-Cano-Aunque-como-candidato-diga-lo-contrario-Massa-aplica-el-ajuste-para-complacer-al-FMI"
@@ -316,7 +323,7 @@ def propuestas():
 
     st.markdown("<h2 style='text-align: center;'>Myriam Bregman (Frente de Izquierda)</h2>", unsafe_allow_html=True)
 
-    with st.expander('📈 **Economia**'):
+    with st.expander('📈 **Economía**'):
           st.write("<br> **Romper con el FMI:** decirle no al pago de la deuda y usar esa plata para pagar salarios, generar trabajo y garantizar el acceso a la salud, educación y vivienda.<br><br> **Nacionalizar la banca y el comercio exterior, estatizar todas las privatizadas:** evitar la fuga de capitales y estatizar privadas de servicios bajo el control de sus trabajadores y usuarios junto con técnicos y especialistas de la universidades públicas. Cuidar a los pequeños ahorristas y brindar créditos baratos. <br><br> **Aumentar salarios, jubilaciones, anular la reforma previsional y prohibir despidos y suspensiones:** el ingreso mensual debe cubrir las necesidades básicas. Expropiar y estatizar empresas en crisis para que sean puestas a producir, bajo el control de sus trabajadores y trabajadoras. Eliminar trabajo precario y en negro, todos y todas a planta permanente. Rechazar nuevas formas de explotación laboral a través de plataformas virtuales. 82% móvil para los jubilados y jubiladas. <br><br> **Eliminar el IVA de la canasta familiar:** Abolir el impuesto al salario.", unsafe_allow_html=True)
     with st.expander('⚕️ **Salud**'):
       st.write("<br> **Garantizar el acceso a la salud:** usando la plata del pago de la deuda al FMI<br><br> **Unificar y centralizar el sistema de salud:** reunir la totalidad de los recursos del sistema público, privado, de obras sociales y de la Universidad, bajo control de los trabajadores y profesionales. Implementar comités de emergencia central y locales, con participación de los y las trabajadores/as. ", unsafe_allow_html=True)
