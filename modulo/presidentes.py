@@ -6,6 +6,7 @@ import numpy as np
 import streamlit.components.v1 as components
 from st_aggrid import AgGrid, GridOptionsBuilder, JsCode, ColumnsAutoSizeMode
 import streamlit_antd_components as sac
+#from modulo.mesa import mesa
 
 
 def presidentes():
@@ -20,12 +21,23 @@ def presidentes():
     listas_x_prov = pd.read_csv("data/resultados_por_lista_CLEAN.csv")
     fuente_votos = pd.read_csv("data/fuente_votos_partidos.csv")
 
+    c1998, c1997, c1996 = st.columns([0.1,0.8,0.1])
+
+    with c1997:
+        st.markdown("<h3 style='text-align: center;'>Qué vas a poder encontrar en esta sección<br></h3>", unsafe_allow_html=True)
+        st.markdown(
+    """
+    <div style="text-align:center; font-size: 1.5em;">Consultá y compará cómo le fue a las agrupaciones y a los candidatos en cada provincia y sección electoral del país. Además, podés comparar en detalle los resultados de las principales agrupaciones y candidatos en Buenos Aires, CABA y el Conurbano Bonaerense. También vas a encontrar datos históricos de comparación con <a href='#comparaci-n-con-elecciones-anteriores'>elecciones anteriores</a>, la evolución del <a href='#alza-del-voto-en-blanco'>voto en blanco</a> y <a href='#baja-participaci-n-en-estas-elecciones'>la participación</a> en las elecciones.</div>
+    """,
+    unsafe_allow_html=True
+)
+    sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='1667')
+    st.markdown("<h5 style='text-align: center;'><br></h5>", unsafe_allow_html=True)
     tabs = sac.buttons(['Por agrupación','Por candidato'], label=None, index=0, format_func=None, align='center', position='top', size='large', direction='horizontal', shape='round', compact=False, return_index=False)
     tabs_sac = sac.buttons(['Por provincia','Por sección'], label=None, index=0, format_func=None, align='center', position='top', size='default', direction='horizontal', shape='round', compact=True, return_index=False, key=888)
 
     #tabs2 = st.tabs(tabs_sac)
     st.markdown("""<style>.css-zt5igj svg{display:none}</style>""", unsafe_allow_html=True)
-
 
 
     if tabs == 'Por agrupación':
