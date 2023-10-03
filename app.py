@@ -1,66 +1,83 @@
 import streamlit as st
-import pandas as pd
-import plotly.graph_objs as go
-import plotly.express as px
-import numpy as np
-import streamlit.components.v1 as components
-from st_aggrid import AgGrid, GridOptionsBuilder, JsCode, ColumnsAutoSizeMode
-import streamlit_antd_components as sac
+from streamlit_option_menu import option_menu
 from modulo.bancas import diputados, senadores
 from modulo.presidentes import presidentes
 from modulo.gobernador import gobernadores
+from modulo.resultadostodos import resultados
+from modulo.dondevoto import donde_voto
+from modulo.faq import faq
+from modulo.mesa import mesa
+from modulo.electores import electores
+from modulo.plataformas import propuestas
 
-st.set_page_config(page_title = 'Elecciones 2023 - Sitio de consulta',
-                    layout='wide', initial_sidebar_state='expanded')
-st.markdown(
-    """
-    <style>
-    [data-testid="collapsedControl"] svg {
-        height: 3rem;
-        width: 3rem;
+st.set_page_config(page_title='Elecciones 2023 - Página de consulta', layout='wide')
+
+
+# selected2 = option_menu("Elecciones 2023", ["Resultados", "Resultados en tu mesa", "Propuestas", "Electores", 'Preguntas frecuentes', "¿Dónde voto?"], 
+#     icons=['bar-chart','search', 'card-list', "people", 'patch-question', "envelope-paper"], 
+#     menu_icon="cast", default_index=0, orientation="horizontal")
+# selected2
+# styles = {
+#     "container": {"margin": "0px !important", "padding": "0!important", "align-items": "stretch", "background-color": "#ffffff"},
+#     "icon": {"color": "black", "font-size": "20px"}, 
+#     "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "#eee", "width": "200px"},
+#     "nav-link-selected": {"background-color": "lightblue", "font-size": "20px", "font-weight": "normal", "color": "black", "width": "200px" },
+# }
+
+menu = {
+    'title': "Elecciones 2023 - Info de calidad pa",
+    'items': { 
+        'Resultados' : {
+            'action': resultados, 'item_icon': 'bar-chart'
+        },
+        'Propuestas' : {
+            'action': propuestas, 'item_icon': 'card-list'
+        },
+        'Electores' : {
+            'action': electores, 'item_icon': 'people'
+        },
+        '¿Dónde voto?' : {
+            'action': donde_voto, 'item_icon': 'envelope'
+        },
+        'FAQ' : {
+            'action': faq, 'item_icon': 'patch-question'
+        }
+    },
+    'menu_icon': 'envelope-paper',
+    'default_index': 0,
+    'with_view_panel': 'main',
+    'orientation': 'horizontal'
+}
+
+def show_menu(menu):
+    def _get_options(menu):
+        options = list(menu['items'].keys())
+        return options
+
+    def _get_icons(menu):
+        icons = [v['item_icon'] for _k, v in menu['items'].items()]
+        return icons
+
+    kwargs = {
+        'menu_title': menu['title'] ,
+        'options': _get_options(menu),
+        'icons': _get_icons(menu),
+        'menu_icon': menu['menu_icon'],
+        'default_index': menu['default_index'],
+        'orientation': menu['orientation']
     }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-st.markdown(
-        """
-       <style>
-       [data-testid="stSidebar"][aria-expanded="true"]{
-           min-width: 200px;
-           max-width: 200px;
-       }
-       """,
-        unsafe_allow_html=True,
-    )
+
+    with_view_panel = menu['with_view_panel']
+    if with_view_panel == 'sidebar':
+        with st.sidebar:
+            menu_selection = option_menu(**kwargs)
+    elif with_view_panel == 'main':
+        menu_selection = option_menu(**kwargs)
+    else:
+        raise ValueError(f"Unknown view panel value: {with_view_panel}. Must be 'sidebar' or 'main'.")
+
+    if menu['items'][menu_selection]['action']:
+        menu['items'][menu_selection]['action']()
 
 
-# tabla_delta_listas = pd.read_csv("data/tabla_delta_listas.csv")
-# tabla_delta = pd.read_csv("data/tabla_delta.csv")
-# partido_ganador_x_prov = pd.read_csv("data/partido_ganador_x_prov.csv")
-# partidos_x_prov = pd.read_csv("data/partidos_x_prov.csv")
-# ganadores_listas_prov = pd.read_csv("data/ganadores_listas_prov.csv")
-# presidencial_x_AP = pd.read_csv("data/resultados_por_partido.csv")
-# votos_candidatos_totales = pd.read_csv("data/votos_candidatos_totales.csv")
-# listas_x_prov = pd.read_csv("data/resultados_por_lista_CLEAN.csv")
-# fuente_votos = pd.read_csv("data/fuente_votos_partidos.csv")
-#geojson_file = "data/Regions geometry.1692055458453.geojson"
-#geojson = gpd.read_file(geojson_file)
-#tabla_ganadores_x_prov = geojson.merge(partido_ganador_x_prov, on="Name")
-#ganadores_listas_prov = geojson.merge(ganadores_listas_prov, on="Name")
-#tabla_votos = tabla_ganadores_x_prov.merge(partidos_x_prov, on=["Name", 'Partido', 'perc'])
-
-
-st.markdown("<h1 style='text-align: center;'>Revisá los resultados de las PASO 2023<br><br></h1>", unsafe_allow_html=True)
-
-
-
-tabs_generales = sac.tabs(['PRESIDENTE','DIPUTADOS','SENADORES', 'GOBERNADOR PBA'], index=0, format_func='upper', height=None, align='center', position='top', shape='default', grow=True, return_index=False)
-if tabs_generales == 'PRESIDENTE':
-    presidentes()
-if tabs_generales == 'DIPUTADOS':
-    diputados()
-if tabs_generales == 'SENADORES':
-    senadores()
-if tabs_generales == 'GOBERNADOR PBA':
-    gobernadores()
+show_menu(menu)
