@@ -1,15 +1,15 @@
-
 import streamlit as st
-from streamlit_option_menu import option_menu
+import pandas as pd
+import plotly.graph_objs as go
+import plotly.express as px
+import numpy as np
+import streamlit.components.v1 as components
+from st_aggrid import AgGrid, GridOptionsBuilder, JsCode, ColumnsAutoSizeMode
+import streamlit_antd_components as sac
 from modulo.bancas import diputados, senadores
 from modulo.presidentes import presidentes
 from modulo.gobernador import gobernadores
-from modulo.resultadostodos import resultados
-from modulo.dondevoto import donde_voto
-from modulo.faq import faq
 from modulo.mesa import mesa
-from modulo.electores import electores
-from modulo.plataformas import propuestas
 
 st.set_page_config(page_title='Elecciones 2023 - Página de consulta', layout='wide')
 st.write("#")
@@ -33,73 +33,15 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-# selected2 = option_menu("Elecciones 2023", ["Resultados", "Resultados en tu mesa", "Propuestas", "Electores", 'Preguntas frecuentes', "¿Dónde voto?"], 
-#     icons=['bar-chart','search', 'card-list', "people", 'patch-question', "envelope-paper"], 
-#     menu_icon="cast", default_index=0, orientation="horizontal")
-# selected2
-styles = {
-      "container": {"padding": "0!important", "background-color": "#ffffff"},
-       "icon": {"color": "black", "font-size": "20px"}, 
-       "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
-       "nav-link-selected": {"background-color": "lightblue", "font-size": "20px", "font-weight": "normal", "color": "black"},
-   }
-
-menu = {
-    'title': "Elecciones 2023",
-    'items': { 
-        'Resultados' : {
-            'action': resultados, 'item_icon': 'bar-chart'
-        },
-        'Propuestas' : {
-            'action': propuestas, 'item_icon': 'card-list'
-        },
-        'Electores' : {
-            'action': electores, 'item_icon': 'people'
-        },
-        '¿Dónde voto?' : {
-            'action': donde_voto, 'item_icon': 'envelope'
-        },
-        'FAQ' : {
-            'action': faq, 'item_icon': 'patch-question'
-        }
-    },
-    'menu_icon': 'envelope-paper',
-    'default_index': 0,
-    'with_view_panel': 'main',
-    'orientation': 'horizontal',
-    'styles': styles
-}
-
-def show_menu(menu):
-    def _get_options(menu):
-        options = list(menu['items'].keys())
-        return options
-
-    def _get_icons(menu):
-        icons = [v['item_icon'] for _k, v in menu['items'].items()]
-        return icons
-
-    kwargs = {
-        'menu_title': menu['title'] ,
-        'options': _get_options(menu),
-        'icons': _get_icons(menu),
-        'menu_icon': menu['menu_icon'],
-        'default_index': menu['default_index'],
-        'orientation': menu['orientation'],
-        'styles': menu['styles']
-    }
-
-    with_view_panel = menu['with_view_panel']
-    if with_view_panel == 'sidebar':
-        with st.sidebar:
-            menu_selection = option_menu(**kwargs)
-    elif with_view_panel == 'main':
-        menu_selection = option_menu(**kwargs)
-    else:
-        raise ValueError(f"Unknown view panel value: {with_view_panel}. Must be 'sidebar' or 'main'.")
-
-    if menu['items'][menu_selection]['action']:
-        menu['items'][menu_selection]['action']()
-
-
-show_menu(menu)
+def resultados():
+    tabs_generales = sac.tabs(['PRESIDENTE','DIPUTADOS','SENADORES', 'GOBERNADOR PBA', 'MESA'], index=0, format_func='upper', height=None, align='center', position='top', shape='default', grow=False, return_index=False)
+    if tabs_generales == 'PRESIDENTE':
+        presidentes()
+    if tabs_generales == 'DIPUTADOS':
+        diputados()
+    if tabs_generales == 'SENADORES':
+        senadores()
+    if tabs_generales == 'GOBERNADOR PBA':
+        gobernadores()
+    if tabs_generales == 'MESA':
+        mesa()
