@@ -11,7 +11,29 @@ from modulo.presidentes import presidentes
 from modulo.gobernador import gobernadores
 from modulo.mesa import mesa
 
-st.set_page_config(page_title='Elecciones 2023 - Página de consulta', layout='wide')
+st.set_page_config(page_title = 'Elecciones 2023 - Sitio de consulta',
+                    layout='wide', initial_sidebar_state='expanded')
+st.markdown(
+    """
+    <style>
+    [data-testid="collapsedControl"] svg {
+        height: 3rem;
+        width: 3rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+st.markdown(
+        """
+       <style>
+       [data-testid="stSidebar"][aria-expanded="true"]{
+           min-width: 200px;
+           max-width: 200px;
+       }
+       """,
+        unsafe_allow_html=True,
+    )
 st.write("#")
 st.markdown("""
         <style>
