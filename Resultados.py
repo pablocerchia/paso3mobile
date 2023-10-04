@@ -55,15 +55,15 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-def resultados():
-    tabs_generales = sac.tabs(['PRESIDENTE','DIPUTADOS','SENADORES', 'GOBERNADOR PBA', 'MESA'], index=0, format_func='upper', height=None, align='center', position='top', shape='default', grow=False, return_index=False)
-    if tabs_generales == 'PRESIDENTE':
-        presidentes()
-    if tabs_generales == 'DIPUTADOS':
-        diputados()
-    if tabs_generales == 'SENADORES':
-        senadores()
-    if tabs_generales == 'GOBERNADOR PBA':
-        gobernadores()
-    if tabs_generales == 'MESA':
-        mesa()
+
+tabs_generales = sac.tabs(['PRESIDENTE','DIPUTADOS','SENADORES', 'GOBERNADOR PBA', 'MESA'], index=0, format_func='upper', height=None, align='center', position='top', shape='default', grow=False, return_index=False)
+if tabs_generales == 'PRESIDENTE':
+    presidentes()
+if tabs_generales == 'DIPUTADOS':
+    diputados()
+if tabs_generales == 'SENADORES':
+    senadores()
+if tabs_generales == 'GOBERNADOR PBA':
+    gobernadores()
+if tabs_generales == 'MESA':
+    mesa()
