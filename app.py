@@ -24,23 +24,14 @@ st.markdown("""
         </style>
         """, unsafe_allow_html=True)
 
-st.markdown("""
-<style>
-/* Add your custom CSS here for mobile styling */
-@media (max-width: 700px) {
-    /* CSS rules for screens smaller than 600px (typical for mobile) */
-    body {
-        font-size: 13px; /* Adjust font size for mobile */
-    }
-    /* Increase margins on mobile */
-    .container {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    /* Add other mobile-specific styling here */
-}
-</style>
-""", unsafe_allow_html=True)
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # selected2 = option_menu("Elecciones 2023", ["Resultados", "Resultados en tu mesa", "Propuestas", "Electores", 'Preguntas frecuentes', "¿Dónde voto?"], 
 #     icons=['bar-chart','search', 'card-list', "people", 'patch-question', "envelope-paper"], 
