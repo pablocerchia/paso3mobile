@@ -36,7 +36,7 @@ def faq():
             st.write("Son aquellas elecciones donde el electorado define entre las listas de candidatos y candidatas de las agrupaciones políticas quienes serán elegidos y elegidas para ocupar los cargos públicos electivos.")
 
         with st.expander('**¿Cuántos votos necesita un candidato ganar en primera vuelta?**'):
-            st.write("Un candidato a presidente tendrá que cumplir con estas normas para ganar en primera vuelta: <br><br> Sacar más del 45% de los votos afirmativos válidamente emitidos.<br> Sacar el 40% de los votos afirmativos válidamente emitidos, con una diferencia de 10 puntos porcentuales sobre la fórmula que le sigue.")
+            st.write("Un candidato a presidente tendrá que cumplir con estas normas para ganar en primera vuelta: <br><br> Sacar más del 45% de los votos afirmativos válidamente emitidos.<br> Sacar el 40% de los votos afirmativos válidamente emitidos, con una diferencia de 10 puntos porcentuales sobre la fórmula que le sigue.", unsafe_allow_html=True)
 
         with st.expander('**¿El voto es obligatorio?**'):
             st.write("El voto es obligatorio para todos los electores que tengan entre 18 y 70 años. Para los que tienen entre 16 y 18 y los que son mayores de 70 el voto es optativo.")
