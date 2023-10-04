@@ -70,11 +70,11 @@ def presidentes():
                     st.markdown("<h5 style='text-align: center; font-weight: normal;'>Mirá dónde se hicieron fuertes y dónde tienen terreno por ganar de cara a las generales.<br></h5>", unsafe_allow_html=True)
                     mapa1, mapa2, mapa3 = st.columns([0.33, 0.34, 0.33])
                     with mapa1:
-                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/14999149" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/14999149" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
                     with mapa2: 
-                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/14999746" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/14999746" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
                     with mapa3:
-                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/14999491" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/14999491" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
                     sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='4')
                     # col1, col2, col3,col4 = st.columns(4)
                     
@@ -293,11 +293,11 @@ def presidentes():
                     #st.write("Mirá dónde se hicieron fuertes y dónde tienen terreno por ganar las principales de agrupaciones de cara a las elecciones.")
                     mapa1, mapa2, mapa3 = st.columns([0.33, 0.34, 0.33])
                     with mapa1:
-                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011745" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011745" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
                     with mapa2: 
-                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008412" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008412" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
                     with mapa3:
-                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008476" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008476" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
                     sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='4')
                     # col1, col2, col3,col4 = st.columns(4)
                     
@@ -342,11 +342,11 @@ def presidentes():
             st.markdown("<h5 style='text-align: center; font-weight: normal;'>Compará cómo les fue en la provincia más poblada del país.<br></h5>", unsafe_allow_html=True)
             mapa111, mapa222, mapa333 = st.columns([0.33, 0.34, 0.33])
             with mapa111:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011178" data-height="700px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=700)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011178" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
             with mapa222: 
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011317" data-height="700px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=700)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011317" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
             with mapa333:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011199" data-height="700px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=700)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011199" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
             sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='412') 
             #st.subheader('MIRADA EN DETALLE: Compará cómo les fue en el conurbano a nivel circuito electoral', anchor=False)
             st.markdown("<h3 style='text-align: center;'>MIRADA EN DETALLE: CONURBANO BONAERENSE<br></h3>", unsafe_allow_html=True)
@@ -392,11 +392,11 @@ def presidentes():
             #st.write("Mirá dónde se hicieron fuertes y dónde tienen terreno por ganar en la capital del país.")
             mapa1111, mapa2222, mapa3333 = st.columns([0.33, 0.34, 0.33])
             with mapa1111:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008285" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008285" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
             with mapa2222: 
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011674" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011674" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
             with mapa3333:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011648" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011648" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
             sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='472') 
             #st.subheader('¿De dónde vinieron los votos de cada agrupación?', anchor=False)
             st.markdown("<h3 style='text-align: center;'>¿DE DÓNDE VINIERON LOS VOTOS DE CADA AGRUPACIÓN?<br></h3>", unsafe_allow_html=True)
@@ -440,11 +440,11 @@ def presidentes():
                 #st.write("Mirá dónde se hicieron fuertes y dónde tienen terreno por ganar Milei, Massa y Bullrich de cara a las elecciones generales.")
                 mapa1, mapa2, mapa3 = st.columns([0.33, 0.34, 0.33])
                 with mapa1:
-                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008664" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008664" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
                 with mapa2: 
-                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008781" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008781" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
                 with mapa3:
-                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008843" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                    components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008843" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
                 sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='412')    
                 # presidencial_x_lista_sorted = votos_candidatos_totales.sort_values(by='Percentage', ascending=False)
                 # fig_presidencial_listas = px.bar(presidencial_x_lista_sorted, x='Percentage', y='Candidatos', color='Candidatos', color_discrete_map=color_lista, orientation='h', text='Percentage',
@@ -485,11 +485,11 @@ def presidentes():
                     #st.write("Mirá dónde se hicieron fuertes y dónde tienen terreno por ganar Milei, Massa y Bullrich de cara a las elecciones generales.")
                     mapa1, mapa2, mapa3 = st.columns([0.33, 0.34, 0.33])
                     with mapa1:
-                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008939" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15008939" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
                     with mapa2: 
-                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15009605" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15009605" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
                     with mapa3:
-                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15009788" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                        components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15009788" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
                     sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='412')   
                     # col1, col2, col3,col4 = st.columns(4)
                     
@@ -560,11 +560,11 @@ def presidentes():
             st.markdown("<h5 style='text-align: center; font-weight: normal;'>Compará cómo les fue en la provincia más poblada del país.<br></h5>", unsafe_allow_html=True)
             mapa1112, mapa2227, mapa3337 = st.columns([0.33, 0.34, 0.33])
             with mapa1112:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011743" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15011743" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
             with mapa2227: 
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15012335" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15012335" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
             with mapa3337:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15012374" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15012374" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
             sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='492') 
             st.markdown("<h3 style='text-align: center;'>MIRADA EN DETALLE: CONURBANO BONAERENSE<br></h3>", unsafe_allow_html=True)
             st.markdown("<h5 style='text-align: center; font-weight: normal;'>En los 24 partidos del Conurbano viven más de 10 millones de personas, lo cual representa <br> el 25% de la población del país y el 64% de la población de Buenos Aires.<br></h5>", unsafe_allow_html=True)
@@ -600,11 +600,11 @@ def presidentes():
             st.markdown("<h5 style='text-align: center; font-weight: normal;'>Mirá dónde se hicieron fuertes y dónde tienen terreno por ganar los principales candidatos en la capital del país.<br></h5>", unsafe_allow_html=True)
             mapa1111, mapa2222, mapa3333 = st.columns([0.33, 0.34, 0.33])
             with mapa1111:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15012544" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15012544" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
             with mapa2222: 
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15012554" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15012554" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
             with mapa3333:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15012574" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=800)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15012574" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""", height=600)
             sac.divider(label='', icon=None, align='center', direction='horizontal', dashed=False, bold=True, key='472') 
             st.markdown("<h3 style='text-align: center;'>CONSULTÁ CÓMO LE FUE A CADA CANDIDATO EN CADA DISTRITO Y EN SU INTERNA<br></h3>", unsafe_allow_html=True)
             #st.subheader("Consultá cómo le fue a cada candidato en cada distrito y en su interna", anchor=False)
@@ -740,11 +740,11 @@ def presidentes():
             st.markdown("<h3 style='text-align: center;'>COMPARACIÓN CON ELECCIONES ANTERIORES<br></h3>", unsafe_allow_html=True)
             mapa11117, mapa2227, mapa33337 = st.columns([0.33, 0.34, 0.33])
             with mapa11117:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/14879048" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/14879048" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
             with mapa2227:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/14845138" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/14845138" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
             with mapa33337:
-                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15164582" data-height="800px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=800)
+                components.html("""<div class="flourish-embed flourish-map" data-src="visualisation/15164582" data-height="600px"><script src="https://public.flourish.studio/resources/embed.js"></script></div>""",height=600)
 
 
 
