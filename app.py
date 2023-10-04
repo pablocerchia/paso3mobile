@@ -24,16 +24,34 @@ st.markdown("""
         </style>
         """, unsafe_allow_html=True)
 
+st.markdown("""
+<style>
+/* Add your custom CSS here for mobile styling */
+@media (max-width: 700px) {
+    /* CSS rules for screens smaller than 600px (typical for mobile) */
+    body {
+        font-size: 13px; /* Adjust font size for mobile */
+    }
+    /* Increase margins on mobile */
+    .container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    /* Add other mobile-specific styling here */
+}
+</style>
+""", unsafe_allow_html=True)
+
 # selected2 = option_menu("Elecciones 2023", ["Resultados", "Resultados en tu mesa", "Propuestas", "Electores", 'Preguntas frecuentes', "¿Dónde voto?"], 
 #     icons=['bar-chart','search', 'card-list', "people", 'patch-question', "envelope-paper"], 
 #     menu_icon="cast", default_index=0, orientation="horizontal")
 # selected2
-styles = {
-     "container": {"margin": "0px !important", "padding": "0!important", "align-items": "stretch", "background-color": "#ffffff"},
-      "icon": {"color": "black", "font-size": "20px"}, 
-      "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "#eee", "width": "200px"},
-      "nav-link-selected": {"background-color": "lightblue", "font-size": "20px", "font-weight": "normal", "color": "black", "width": "200px" },
-  }
+# styles = {
+#      "container": {"margin": "0px !important", "padding": "0!important", "align-items": "stretch", "background-color": "#ffffff"},
+#       "icon": {"color": "black", "font-size": "20px"}, 
+#       "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "#eee", "width": "200px"},
+#       "nav-link-selected": {"background-color": "lightblue", "font-size": "20px", "font-weight": "normal", "color": "black", "width": "200px" },
+#   }
 
 menu = {
     'title': "Elecciones 2023",
@@ -57,8 +75,7 @@ menu = {
     'menu_icon': 'envelope-paper',
     'default_index': 0,
     'with_view_panel': 'main',
-    'orientation': 'horizontal',
-    'styles': styles
+    'orientation': 'horizontal'
 }
 
 def show_menu(menu):
@@ -76,8 +93,7 @@ def show_menu(menu):
         'icons': _get_icons(menu),
         'menu_icon': menu['menu_icon'],
         'default_index': menu['default_index'],
-        'orientation': menu['orientation'],
-        'styles': menu['styles']
+        'orientation': menu['orientation']
     }
 
     with_view_panel = menu['with_view_panel']
