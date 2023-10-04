@@ -21,7 +21,23 @@ def presidentes():
     listas_x_prov = pd.read_csv("data/resultados_por_lista_CLEAN.csv")
     fuente_votos = pd.read_csv("data/fuente.csv")
     fuente_votos = fuente_votos[['Distrito','Electores', 'La Libertad Avanza', 'Juntos por el Cambio', 'Unión por la Patria']]
-
+    st.markdown("""
+<style>
+/* Add your custom CSS here for mobile styling */
+@media (max-width: 700px) {
+    /* CSS rules for screens smaller than 600px (typical for mobile) */
+    body {
+        font-size: 13px; /* Adjust font size for mobile */
+    }
+    /* Increase margins on mobile */
+    .container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    /* Add other mobile-specific styling here */
+}
+</style>
+""", unsafe_allow_html=True)
     c1998, c1997, c1996 = st.columns([0.1,0.8,0.1])
 
     with c1997:
