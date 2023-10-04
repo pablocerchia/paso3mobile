@@ -29,7 +29,8 @@ def faq():
 
 
     with c5:
-        st.markdown("<h1 style='text-align: center;'>Preguntas frecuentes sobre las elecciones<br><br><br></h1>", unsafe_allow_html=True)
+        #st.markdown("<h1 style='text-align: center;'>Preguntas frecuentes sobre las elecciones<br><br><br></h1>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center;'>PREGUNTAS FRECUENTES SOBRE LAS ELECCIONES<br></h3>", unsafe_allow_html=True)
 
         with st.expander('**¿Qué son las elecciones generales?**'):
             st.write("Son aquellas elecciones donde el electorado define entre las listas de candidatos y candidatas de las agrupaciones políticas quienes serán elegidos y elegidas para ocupar los cargos públicos electivos.")
