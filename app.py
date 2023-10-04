@@ -1,8 +1,13 @@
+
 import streamlit as st
 from streamlit_option_menu import option_menu
+from modulo.bancas import diputados, senadores
+from modulo.presidentes import presidentes
+from modulo.gobernador import gobernadores
 from modulo.resultadostodos import resultados
 from modulo.dondevoto import donde_voto
 from modulo.faq import faq
+from modulo.mesa import mesa
 from modulo.electores import electores
 from modulo.plataformas import propuestas
 
@@ -23,12 +28,12 @@ st.markdown("""
 #     icons=['bar-chart','search', 'card-list', "people", 'patch-question', "envelope-paper"], 
 #     menu_icon="cast", default_index=0, orientation="horizontal")
 # selected2
-# styles = {
-#     "container": {"margin": "0px !important", "padding": "0!important", "align-items": "stretch", "background-color": "#ffffff"},
-#     "icon": {"color": "black", "font-size": "20px"}, 
-#     "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "#eee", "width": "200px"},
-#     "nav-link-selected": {"background-color": "lightblue", "font-size": "20px", "font-weight": "normal", "color": "black", "width": "200px" },
-# }
+styles = {
+     "container": {"margin": "0px !important", "padding": "0!important", "align-items": "stretch", "background-color": "#ffffff"},
+      "icon": {"color": "black", "font-size": "20px"}, 
+      "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "#eee", "width": "200px"},
+      "nav-link-selected": {"background-color": "lightblue", "font-size": "20px", "font-weight": "normal", "color": "black", "width": "200px" },
+  }
 
 menu = {
     'title': "Elecciones 2023",
@@ -52,7 +57,8 @@ menu = {
     'menu_icon': 'envelope-paper',
     'default_index': 0,
     'with_view_panel': 'main',
-    'orientation': 'horizontal'
+    'orientation': 'horizontal',
+    'styles': styles
 }
 
 def show_menu(menu):
@@ -70,7 +76,8 @@ def show_menu(menu):
         'icons': _get_icons(menu),
         'menu_icon': menu['menu_icon'],
         'default_index': menu['default_index'],
-        'orientation': menu['orientation']
+        'orientation': menu['orientation'],
+        'styles': menu['styles']
     }
 
     with_view_panel = menu['with_view_panel']
